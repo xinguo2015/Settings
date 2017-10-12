@@ -332,6 +332,11 @@ nmap <silent> <leader>gg :source ~/.vimrc<cr>
 "nmap <silent> <leader>vv :e ~/.vimrc<cr>
 nmap <silent> <leader>vv :e ~/Settings/vim/xinguo.vimrc<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+imap <C-h> <C-o>h
+imap <C-l> <C-o>l
+imap <C-j> <C-o>gj
+imap <C-k> <C-o>gk
+imap <C-a> <C-o>A
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " quickfix 快捷键
@@ -343,11 +348,14 @@ nmap <leader>cc :botright cope<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 快捷键设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" make call
+imap <F5> <Esc>:w<CR>:make<CR>
+nmap <F5> <Esc>:w<CR>:make<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " F6 - 轮换buffer
-"nmap <F6>  <c-tab> |"(使用MiniBufferExplorer插件)
 imap <F6>  <Esc><F6>
-nmap <F6>  :bn<CR>
-nmap <leader><F6>  :bp<CR>
+nmap <F6>  :bn!<CR>
+nmap <leader><F6> :bp!<CR>
 
 " F4 - next qfix
 imap <F4> <Esc><F4>
